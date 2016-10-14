@@ -1,0 +1,313 @@
+python IDLE
+
+>>> 10 % 2
+0
+>>> 10 // 2
+5
+>>> 18 / 7
+2
+>>> 18.0 / 7
+2.5714285714285716
+>>> 18 / 7.0
+2.5714285714285716
+>>> 7**3 (exponential)
+343
+u can also use pow(7,3)
+
+>>> abs(5)
+5
+>>> abs(-18)
+18
+
+>>> floor(14.2)
+
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    floor(14.2)
+NameError: name 'floor' is not defined
+>>> import math
+>>> floor(14.2)
+
+Traceback (most recent call last):
+  File "<pyshell#34>", line 1, in <module>
+    floor(14.2)
+NameError: name 'floor' is not defined
+>>> math.floor(14.2)
+14.0
+
+>>> math.sqrt (81)
+9.0
+
+>>> plankton = math.sqrt
+>>> planton (81)
+
+Traceback (most recent call last):
+  File "<pyshell#39>", line 1, in <module>
+    planton (81)
+NameError: name 'planton' is not defined
+>>> plankton(81)
+9.0
+
+------
+
+Write a new file.
+>>> 
+== RESTART: E:/jsamuel/PHP/radical_python/radical_final/1_IDLE_scripts/1.py ==
+hey now brown cow
+>>> 
+== RESTART: E:/jsamuel/PHP/radical_python/radical_final/1_IDLE_scripts/1.py ==
+hey now brown cow
+
+------
+
+Write another new file.
+x = raw_input("Enter name:")
+print "hey " + x 
+raw_input("press enter")
+execute using python.exe
+
+------
+
+>>> he's a jerk
+SyntaxError: EOL while scanning string literal
+>>> 'he's a jerk '
+SyntaxError: invalid syntax
+>>> "he's a jerk"
+"he's a jerk"
+>>> 'he\'s a jerk'
+"he's a jerk"
+
+-------
+
+>>> print "my age is: " + `num2`
+my age is: 10
+
+`` ( backticks can be used the same way as str() )
+
+repr() does the same as str()
+
+-------
+
+input -vs- raw_input()
+	>> raw_input uses everything given to it as a string.
+	>> input uses everything as an expression
+
+>>> name = input("what is your name ?")
+what is your name ? jj
+The main difference is that input() expects a syntactically correct python statement where raw_input() does not.
+
+>>> name = input("what is your name ?")
+what is your name ? jj
+
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    name = input("what is your name ?")
+  File "<string>", line 1, in <module>
+NameError: name 'jj' is not defined
+>>> name = input("what is your name ?")
+what is your name ? 1
+>>> name = input("what is your name ?")
+what is your name ? 1 + 1
+	
+-------
+slicing:-
+
+list1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]	
+list1[4:8]
+
+>>> list1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list1[-1]
+9
+>>> list1[-2]
+8
+>>> list1[0]
+0
+>>> list1[1]
+1
+>>> list1[0:5]
+[0, 1, 2, 3, 4]
+>>> list1[-5:-1]
+[5, 6, 7, 8]
+>>> list1[-5:0]
+[]
+>>> list1[-5:]
+[5, 6, 7, 8, 9]
+>>> list1[:7]
+[0, 1, 2, 3, 4, 5, 6]
+>>> list1[:]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> 
+>>> list1[10:0:-2]
+[9, 7, 5, 3, 1]
+>>> list1[10:0:-2]
+[9, 7, 5, 3, 1]
+>>> list1[::-2]
+[9, 7, 5, 3, 1]
+
+------
+
+>>> [10,20] + "hello"
+
+Traceback (most recent call last):
+  File "<pyshell#79>", line 1, in <module>
+    [10,20] + "hello"
+TypeError: can only concatenate list (not "str") to list
+
+concatenate can only work on 2 same data types
+
+>>> "js"*10
+'jsjsjsjsjsjsjsjsjsjs'
+>>> 21*10
+210
+>>> [21]*10
+[21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
+
+------
+
+membership
+
+check if a variable is "in" the list.
+>>> name = "plankton"
+>>> 'z' in name
+False
+>>> 'p' in name
+True
+
+---
+
+>>> family = ['dad', 'mom', 'bro']
+>>> 'sis' in family
+False
+>>> 'bro' in family
+True
+>>> 'sis' not in family
+True
+>>> 'bro' not in family
+False
+>>> 
+
+------
+
+slicing lists.
+
+>>> list('plankton')
+['p', 'l', 'a', 'n', 'k', 't', 'o', 'n']
+
+-------
+
+>>> list2 = [10, 20, 30, 40, 50]
+>>> min(list2)
+10
+>>> del list2[0]
+>>> list2
+[20, 30, 40, 50]
+>>> del list2[0:2]
+>>> list2
+[40, 50]
+>>> list2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+>>> list2[1:3]
+[20, 30]
+>>> list2[1:3] = ("twenty", "thirty")
+>>> list2
+[10, 'twenty', 'thirty', 40, 50, 60, 70, 80, 90, 100]
+>>> 
+>>> list2[1:3] = (20,30)
+>>> list2
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+>>> list2[::2]
+[10, 30, 50, 70, 90]
+>>> list2[::2] = (1, 3, 5, 7, 9)
+>>> list2
+[1, 20, 3, 40, 5, 60, 7, 80, 9, 100]
+>>> list2[::2] = (10, 30, 50, 70, 90)
+>>> list2
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+-- another way of deleting --
+>>> list2[1:3] = []
+>>> list2
+[10, 40, 50, 60, 70, 80, 90, 100]
+
+--overwriting previously indexed of 1:3--
+>>> list2[1:3] = (20, 30)
+>>> list2
+[10, 20, 30, 60, 70, 80, 90, 100]
+>>> 
+
+-------
+
+>>> list2.pop(0)
+10
+>>> list2
+[20, 30, 60, 70, 80, 90, 100]
+
+---------
+extend requires an iterable
+	
+	An iterable is an object that has an __iter__ method which returns an iterator, 
+		-or- 
+		which defines a __getitem__ method that can take sequential indexes starting from zero (and raises an IndexError when the indexes are no longer valid). ... 
+	
+	An iterator is an object with a next (Python 2) or __next__ (Python 3) method.
+
+a dict is also an iterable. but when given as a param to list, only its keys are added to list2.
+eg.
+>>> list2.extend({1:10})
+>>> list2
+[20, 30, 60, 70, 80, 90, 100, 1]
+
+>>> list2.extend({'key1':'val1', 'key2':'val2'})
+>>> list2
+[20, 30, 60, 70, 80, 90, 100, 1, 'key2', 'key1']
+>>> 
+
+appending list1 to list2.
+
+>>> list2.extend(list1)
+>>> list2
+[20, 30, 60, 70, 80, 90, 100, 1, 'key2', 'key1', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+--------
+identifying an iterable. use <objname>.__iter__() . __getitem__() can also be used i think, but this example shows __iter__()
+
+>>> list2.__iter__()
+<listiterator object at 0x02A8EAF0>
+>>> if (list2.__iter__()):
+	print "hi"
+
+	
+hi
+>>> 
+>>> dict1 = {'key10': 'val10', 'key11': 'val10'}
+>>> if (dict1.__iter__()):
+	print "dict2 is an iterable"
+
+	
+dict2 is an iterable
+>>> dict1.__iter__()
+<dictionary-keyiterator object at 0x02A94F60>
+
+eg. proving dict object is an iterable and NOT an iterator
+>>> while True:
+	dict1.next()
+--------
+
+https://www.proptiger.com/pune/pimpri-51153/schools
+
+--------
+
+>>> dict3 = {'k1':'v1', 'k2':'v2', 'k3':'v3', 'k4':'v4', 'k5':'v5'}
+>>> dict3
+{'k3': 'v3', 'k2': 'v2', 'k1': 'v1', 'k5': 'v5', 'k4': 'v4'}
+
+>>> dict3['k1']
+'v1'
+>>> dict3['k1'][0]
+'v'
+>>> dict3['k1'][1]
+'1'
+>>> 
+
+--------
+
